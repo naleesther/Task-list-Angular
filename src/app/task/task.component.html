@@ -1,0 +1,69 @@
+<mat-card class="cancel">
+                <div fxLayout="row" fxLayoutAlign="end end" >
+                <div><mat-icon style="font-size:25px; margin-left: -35px;margin-top: 5px;" (click)="closeDialog()">highlight_off </mat-icon></div>
+                </div>
+            </mat-card>
+            
+            <form class="example-form1">
+              <mat-form-field class="example-full-width">
+                <input matInput #message maxlength="256" placeholder="Add Title ">
+              </mat-form-field>
+            </form>  
+
+        
+        <div class="form-container" >  
+           <div class="icons">
+            <mat-icon>sort</mat-icon>
+          
+           </div>
+           <div class="icon1" style="margin-top: 60px;margin-left: -20px;">
+            <mat-icon>schedule</mat-icon>
+
+           </div>
+           <div class="icon2" style="margin-top: 150px;margin-left: -30px;">
+            <mat-icon>people</mat-icon>
+
+           </div>
+<div class="form">
+<form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <input matInput #message maxlength="256" placeholder="Add task description ">
+                </mat-form-field>
+</form>
+
+<mat-form-field style="width: 390px;margin-left: 5px;" >
+<mat-label >Add completion date</mat-label>
+
+<input matInput type="text" [(ngModel)]="value">
+<!-- <label for="birthday" style="margin-left: 50px;"></label> 
+<input type="date">  -->
+<!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''" >
+<mat-icon  >close</mat-icon>
+
+</button> -->
+</mat-form-field>
+<div class="clos" style="margin-top: -60px;">
+   <div>
+           <div>
+
+                   <form>
+                  <mat-form-field class="example-full-width2" appearance="fill">
+                    <mat-label>Assigned by</mat-label>
+                    <input type="text"
+                           placeholder="Pick one"
+                           aria-label="Names"
+                           matInput [formControl]="myControl"
+                           [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </form>
+           </div>
+              
+        </div>
+        <div class="button">
+          <button mat-button color="primary">Save</button>
+        </div>

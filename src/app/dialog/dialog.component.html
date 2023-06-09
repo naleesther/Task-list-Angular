@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<div class="dialog">
+  <mat-card-content>Pending</mat-card-content>
+  <mat-icon style="margin-top: -5px; margin-left: 750px"
+  (click)="closeDialog()">highlight_off </mat-icon>
+
+
+  <div class="item3" style="margin-top: 8px">
+    <mat-divider></mat-divider>
+  </div>
+  <mat-list style="margin-left: 18px">
+    <h5 style="font-weight: bold">Design ></h5>
+    <span
+      ><p style="margin-top: -34px; margin-left: 70px">List of task</p></span
+    >
+    <h5 style="font-weight: bold">Design Checkout Dialog</h5>
+    <h4 style="color: gray">Description</h4>
+  </mat-list>
+  <mat-grid-list cols="2" rowHeight="5:1" style="width: 400px">
+    <mat-grid-tile style="margin-left: 12px"
+      ><p style="margin-left: -100px; margin-top: 20px">
+        Start/Due
+      </p></mat-grid-tile
+    >
+    <mat-grid-tile
+      >
+        <label for="birthday"></label>
+        <input type="date">
+       
+
+              <form class="example">
+          <mat-form-field
+            class="example-full-width"
+            style="margin-left: -520px"
+          >
+            <mat-label></mat-label>
+            <input matInput #message maxlength="256" />
+          </mat-form-field>
+        </form>
+  </mat-grid-tile>
+     <mat-grid-tile style="margin-left: 12px;height: 16px;"
+      ><p style="margin-left: -90px; margin-top: 20px;">
+        Assigned by
+      </p>
+    </mat-grid-tile> 
+  <form class="example-form3">
+        <mat-form-field class="example-full-width1" appearance="fill">
+          <mat-label>Names</mat-label>
+          <input type="text"
+                 placeholder="Pick one"
+                 aria-label="Names"
+                 matInput [formControl]="myControl"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+      
+<div class="grid">
+      <mat-grid-tile ><p style="margin-left: -110px; margin-top: 20px;">Progress </p></mat-grid-tile
+    > 
+  </div>
+  <mat-form-field appearance="fill" style="margin-left: 210px;margin-top:60px;width: 190px;">
+    <mat-label>Choose an option</mat-label>
+    <mat-select [disabled]="disableSelect.value">
+      <mat-option value="option1">Inprogress</mat-option>
+      <mat-option value="option3">Complete</mat-option>
+
+      <mat-option value="option3">Done</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+ <h4 style="margin-left: 20px;">Sub tasks</h4>
+
+<form  [formGroup]="form" (ngSubmit)="save()"class="example-form1">
+  <mat-form-field class="example-full-width" style="height: 80px;width: 380px;margin-left: 20px;">
+  <input matInput #message maxlength="256" formControlName="title" (change)="changes($event.target)"
+  formplaceholder=" Add task and hit enter/return key" style="margin-left: 20px;" >
+  <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''" >
+    <mat-icon style="background-color: red;" >close</mat-icon>
+    </button> -->
+     
+ 
+    </mat-form-field>
+    <div >
+      <ul >
+          <li *ngFor="let item of list">{{item.title}} 
+            {{item.status}}
+            
+          </li>
+        </ul>
+      
+      </div>
+  </form>
+  <div class="button">
+    <button mat-button color="primary">Submit</button>
+  </div>
+  </mat-grid-list>
+
+    <form action="/action_page.php" style="margin-left: 70px;margin-top: -115px;">
+      <input type="file" id="myFile" name="filename">
+    </form> 
+  <h5 style="color: gray; margin-left: 60px; margin-top: -170px">
+    No subtasks exist in this task
+  </h5> 
+  
+  </div>
+
+
+
+ 

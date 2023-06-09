@@ -1,0 +1,38 @@
+<div class="cont2">
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" class="nav" opened>
+        <img src="..//../assets/images/JP Logo.svg">
+
+<div class="icons">
+<mat-list class="Home">
+
+  <mat-list-item *ngFor="let note of notes">
+    <mat-icon  matListItemIcon  routerLinkActive="active-link" routerLink="home" style="color: white; margin-left: 5px;" class="home">home</mat-icon>
+
+    <div matListItemTitle routerLink="home">{{note.name}}</div>
+
+  </mat-list-item>
+</mat-list>
+
+<mat-list class="Folder1">
+
+  <mat-list-item *ngFor="let project of projects">
+    <mat-icon matListItemIcon routerLinkActive="active-link" routerLink="dashboard" style="color: white;margin-left: 5px;" class="folder">folder</mat-icon>
+
+    <div matListItemTitle routerLink="dashboard">{{project.name}}</div>
+
+  </mat-list-item>
+</mat-list>
+
+
+</div>
+</mat-drawer>
+
+
+  
+<mat-drawer-content>
+
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+</div>

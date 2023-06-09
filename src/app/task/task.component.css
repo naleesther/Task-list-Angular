@@ -1,0 +1,50 @@
+.cancel{
+    background-color: #eeeeee;
+    height: 6.4vh;
+}
+.example-form {
+    /* min-width: 250px;
+    max-width: 700px; */
+    width: 120%;
+  }
+  .example-form1 {
+    margin-top: 30px;
+    width: 78%;
+    margin-left: 70px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .example-full-width2{
+    width: 120%;
+    margin-top: 60px;
+  }
+.button button{
+    margin-left: 100%;
+    color: white;
+    background-color: blue;
+    margin-top: -10px;
+    height: 6vh;
+    width: 75px;
+    border-radius: 6px;
+    border: chocolate;
+}
+.form-container{
+    display: flex;
+    margin: 1rem  3rem;
+    margin-top: 3rem;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -1.2rem;
+
+}
+
+.form{
+    width: 80%;
+    margin-top: -30px;
+}

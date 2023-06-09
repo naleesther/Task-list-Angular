@@ -1,0 +1,151 @@
+<div>
+<link
+
+
+
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<div class="container">
+  <img src="../../assets/images/beach.png" />
+  <p class="mat-h2">
+    <span> <button mat-fab color="warn">JW</button></span> Good morning, James!
+  </p>
+</div>
+<mat-card class="all">
+  <mat-list>
+    <div fxLayout="row" fxLayoutAlign="space-evenly center">
+      <mat-icon style="margin-left: -30px;">folder_open</mat-icon> Projects
+      <span class="material-symbols-outlined">filter_alt</span><span>Recent</span>
+      <div>Favourite</div>
+      <div>
+        <span><mat-icon>more_vert</mat-icon></span>
+      </div>
+    </div>
+
+    <div>
+      <mat-divider></mat-divider>
+      <div class="starr">
+        <mat-icon style="margin-top: -3px;">star_border</mat-icon>Design<span style="margin-left: 100px"
+          >Feb 1=>Feb5</span
+        >
+      </div>
+    </div>
+
+    <div class="item3">
+      <mat-divider></mat-divider>
+    </div>
+  </mat-list>
+</mat-card>
+
+<mat-card class="card2">
+  <div fxLayout="row" fxLayoutAlign="space-evenly center">
+      <mat-icon style="margin-left: -85px;">format_list_bulleted</mat-icon><p style="margin-left: -100px;margin-top: 16px;">My Tasks</p>
+    <span class="material-symbols-outlined">filter_alt</span>
+    <div>
+      <span><mat-icon>add</mat-icon></span>
+    </div>
+  </div>
+  <div class="item3">
+    <mat-divider></mat-divider>
+  </div>
+
+  <mat-list-item style="margin-top: -10px"
+    ><span></span>Title<span style="margin-left: 200px"
+      >Due Date</span
+    ></mat-list-item
+  >
+  <div class="item3">
+    <mat-divider></mat-divider>
+  </div>
+  <h4 class="mat-h4">This Week</h4>
+  <mat-selection-list #tasks [multiple]="false">
+    <div class="tasks">
+      <hr style="margin-top: -20px" />
+
+<mat-radio-group aria-label="Select an option">
+
+        <mat-card class="progres">
+
+        <mat-icon [style.color]="default_color"
+            >{{default_icon}}
+
+            <button
+              mat-button
+              [matMenuTriggerFor]="menu"
+              style="margin-left: -60px; height: 10px;">
+
+<div class="pro">
+
+<mat-menu #menu="matMenu" yPosition="above" >
+
+<button mat-menu-item *ngFor="let item of menuitem_array" value="item" >  <p (click)="passItems(item)"  > <mat-icon [style.color]="item.color"
+>{{item.icon}}</mat-icon>{{item.text}}</p>
+
+</button>                    
+</mat-menu>
+  <hr />
+  </div>
+  </button>
+  </mat-icon>
+</mat-card>
+
+</mat-radio-group>
+<button mat-button (click)="openDialog()" style="margin-left: 30px;width: 100px;margin-top: -55px;">First task</button>
+    </div>
+
+
+ <mat-radio-group aria-label="Select an option" >
+      <mat-card class="progres1">
+        <p style="margin-bottom: -20px; margin-left: 38px; " >{{default_text1}}     </p>
+      <mat-icon [style.color]="">{{default_icon1}}
+          <button mat-button
+            [matMenuTriggerFor]="menu"
+            style="margin-left: -60px; height: 10px;">
+<div class="pro">
+<mat-menu #menu="matMenu" XPosition="above" >
+                    <button mat-menu-item *ngFor="let item of menuitem_array1" value="item" > <p (click)="passItems1(item)"  ><mat-icon [style.color]="item.color1"
+                  >{{item.icon1}}</mat-icon>{{item.text1}} </p>
+                      </button>
+                      
+                  
+</mat-menu>
+
+<cdk-virtual-scroll-viewport
+                  appendOnly
+                  itemSize="50"
+                  class="example-viewport"
+                >
+                  <div class="cont">
+                  </div>
+                 
+                  
+                </cdk-virtual-scroll-viewport>
+
+                <hr />
+              
+            </div>
+          </button>
+        </mat-icon>
+</mat-card>
+    </mat-radio-group>
+    <div class="item3">
+      <mat-divider></mat-divider>
+    </div>
+    <h4 class="mat-h4">Next Week</h4>
+    <div class="item3">
+      <mat-divider></mat-divider>
+    </div>
+    <div class="item3">
+      <mat-divider></mat-divider>
+    </div>
+
+
+
+
+   
+ 
+  </mat-selection-list>
+  
+</mat-card>
+

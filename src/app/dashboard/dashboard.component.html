@@ -1,0 +1,374 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+
+<mat-card class="cont">
+  <mat-card class="list">
+    <div class="design" style="margin-top: 20px">
+      <div fxLayout="row" fxLayoutAlign="space-evenly stretch">
+        <h4 style="margin-left: -250px">Design</h4>
+        <h4 style="color: blue; margin-top: -1px">Task List System</h4>
+        <mat-icon style="margin-top: -1%">notifications</mat-icon>
+      </div>
+    </div>
+    <mat-card class="name">
+      <button
+        mat-button
+        [matMenuTriggerFor]="menu"
+        style="margin-left: -15px; color: white"
+      >
+        JW
+        <mat-menu #menu="matMenu">
+          <mat-card class="inner-name">
+            <p>JW</p>
+          </mat-card>
+          <h3 style="margin-left: 50px; margin-top: -30px">James Wachira</h3>
+          <hr />
+          <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+            <span>Settings</span>
+          </button>
+          <button mat-menu-item>
+            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-icon>key</mat-icon>
+            <span>Change Password</span>
+          </button>
+          <hr />
+          <button mat-menu-item>Mode</button>
+          <table>
+            <tr>
+              <button>
+                <p>Light Mode</p>
+              </button>
+              <button>
+                <p>Dark Mode</p>
+              </button>
+            </tr>
+          </table>
+          <hr />
+          <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            <span>LogOut</span>
+          </button>
+        </mat-menu>
+      </button>
+    </mat-card>
+  </mat-card>
+  <mat-card class="card">
+    <div class="stages" style="margin-left: 480px">
+      <div fxLayout="row" fxLayoutAlign="space-evenly start">
+        <h5><u class="dotted"> Stages</u><br />All</h5>
+        <h5><u class="dotted">Task</u><br />Active</h5>
+        <h5>
+          <u class="dotted">View</u><br />
+          <button
+            mat-button
+            [matMenuTriggerFor]="items"
+            style="font-weight: lighter; margin-top: -6px; font-size: small"
+          >
+            Start:Ay,D
+          </button>
+          <mat-menu #items="matMenu">
+            <button mat-menu-item>Start Date</button>
+            <mat-form-field appearance="fill">
+              <mat-label>This Week</mat-label>
+              <mat-select>
+                <mat-select-trigger>
+                  {{topping.value?.[0] || ''}}
+                  <span
+                    *ngIf="(topping.value?.length || 0) > 1"
+                    class="example-additional-selection"
+                  >
+                    (+{{ (topping.value?.length || 0) - 1 }}
+                    {{ topping.value?.length === 2 ? "other" : "others" }})
+                  </span>
+                </mat-select-trigger>
+                <mat-option
+                  *ngFor="let topping of toppingList"
+                  [value]="topping"
+                  >{{ topping }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+
+            <button mat-menu-item>Due Date</button>
+            <mat-form-field appearance="fill">
+              <mat-label>This Week</mat-label>
+              <mat-select>
+                <mat-select-trigger>
+                  {{topping.value?.[0] ||''}}
+                  <span
+                    *ngIf="(topping.value?.length || 0) > 1"
+                    class="example-additional-selection"
+                  >
+                    (+{{ (topping.value?.length || 0) - 1 }}
+                    {{ topping.value?.length === 2 ? "other" : "others" }})
+                  </span>
+                </mat-select-trigger>
+                <mat-option
+                  *ngFor="let topping of toppingsList"
+                  [value]="topping"
+                  >{{ topping }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+            <div class="btn1">
+              <button mat-button color="primary">Apply</button>
+            </div>
+            <div class="button">
+              <button mat-button color="primary">Cancel</button>
+            </div>
+          </mat-menu>
+        </h5>
+      </div>
+    </div>
+    <mat-form-field
+      appearance="fill"
+      style="width: 140px; margin-left: 25px; margin-top: -50px"
+    >
+      <mat-select [(value)]="selected">
+        <mat-option value="option2">
+          <mat-icon>border_all</mat-icon>
+          <span>BoardView</span>
+        </mat-option>
+        <mat-option value="option3">
+          <mat-icon>view_module</mat-icon>
+
+          <span>TableView</span>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="search">
+      <mat-form-field class="example-form-field">
+        <mat-label>Search for tasks</mat-label>
+        <input matInput type="text" [(ngModel)]="value" />
+        <button
+          *ngIf="value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="value = ''"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </mat-card>
+  <div fxLayout="row" fxLayoutAlign="space-evenly start" style="padding: 2%">
+    <h3 style="margin-left: -5%; font-size: small">Backlog</h3>
+    <span>
+      <div class="example-button-container">
+        <button
+          mat-mini-fab
+          color="primary"
+          style="background-color: rgb(0, 128, 0)"
+        >
+          <h3 id="g">{{ todo1_count }}</h3>
+        </button>
+      </div>
+    </span>
+    <h4 style="margin-left: 7%; font-size: small">Inprogress</h4>
+    <span>
+      <div class="example-button-container">
+        <button
+          mat-mini-fab
+          color="primary"
+          style="background-color: rgb(0, 128, 0)"
+        >
+          <h3 id="g">{{ inprogress_count }}</h3>
+        </button>
+      </div>
+    </span>
+    <h5 style="margin-left: 15%; font-size: small">Complete</h5>
+    <span>
+      <div class="example-button-container">
+        <button
+          mat-mini-fab
+          color="primary"
+          style="background-color: rgb(0, 128, 0)"
+        >
+          <h3 id="g">{{ complete_count }}</h3>
+        </button>
+      </div>
+    </span>
+  </div>
+
+  <div class="task">
+
+    <button class="tasks"(click)="open_task_form()"
+    class="progress" style="height: 30px; margin-top: -20px;width: 150px;"
+    ><span style="margin-left: 50px; ">Add Task</span><span>  <mat-icon style="margin-left: -140px;margin-top: -2px;">add</mat-icon> 
+    </span>
+
+  </button>
+
+  </div>
+
+   <div cdkDropListGroup>
+    <div
+      [ngStyle]="{ 'background-color': bgColor }"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
+      class="article"
+    >
+    <button style="margin-top: 25px;margin-left: 200px;"
+
+        mat-icon-button
+        [matMenuTriggerFor]="menu1"
+         >
+        <mat-icon >more_vert</mat-icon>
+      </button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item style="width: 200px;height: 4vh;">
+          <mat-icon>visibility</mat-icon>
+          <span
+            (click)="open_task_dialog()"
+            class="progress"
+            style="font-size: 15px"
+            >View Task</span
+          >
+        </button>
+        <button mat-menu-item ena>
+          <mat-icon>delete</mat-icon>
+          <span>Delete</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>share</mat-icon>
+          <span>Share</span>
+        </button>
+        <button mat-menu-item>
+          <span>Move</span>
+        </button>
+        <button mat-menu-item>
+          <span>Archive</span>
+        </button>
+      </mat-menu>
+      <div class="examplle-container">
+        <div
+          cdkDropList
+          [cdkDropListData]="todo1"
+          class="example-list"
+          cdkDropListSorting
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="example-box" *ngFor="let item of todo1" cdkDrag>
+            {{ item }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+    class="article1"
+    [ngStyle]="{'background-color':hover ?'red':''}"
+    (mouseenter)="hover= true"
+    (mouseleave)="hover= false">
+    <button style="margin-top: 25px;margin-left: 190px;"
+    mat-icon-button
+    [matMenuTriggerFor]="menu1"
+  >
+    <mat-icon >more_vert</mat-icon>
+  </button>
+  <mat-menu #menu1="matMenu">
+    <button mat-menu-item>
+      <mat-icon>visibility</mat-icon>
+      <span
+        (click)="open_task_dialog()"
+        class="progress"
+        style="font-size: 15px"
+        >View Task</span
+      >
+    </button>
+    <button mat-menu-item ena>
+      <mat-icon>delete</mat-icon>
+      <span>Delete</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>share</mat-icon>
+      <span>Share</span>
+    </button>
+    <button mat-menu-item>
+      <span>Move</span>
+    </button>
+    <button mat-menu-item>
+      <span>Archive</span>
+    </button>
+  </mat-menu>
+      <div class="example-container">
+        <div
+          cdkDropList
+          [cdkDropListData]="inprogress"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="example-box" *ngFor="let item of inprogress" cdkDrag>
+            {{ item }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="article2"
+    
+    [ngStyle]="{'background-color':hovering ?'black':''}"
+    (mouseenter)="hovering= true"
+    (mouseleave)="hovering= false"
+    
+  >
+    
+  <button style="margin-top: 25px;margin-left: 200px;"
+  mat-icon-button
+    [matMenuTriggerFor]="menu1"
+  >
+    <mat-icon >more_vert</mat-icon>
+  </button>
+  <mat-menu #menu1="matMenu">
+    <button mat-menu-item>
+      <mat-icon >visibility</mat-icon>
+      <span
+        (click)="open_task_dialog()"
+        class="progress"
+        style="font-size: 15px"
+        >View Task</span
+      >
+    </button>
+    <button mat-menu-item ena>
+      <mat-icon>delete</mat-icon>
+      <span>Delete</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>share</mat-icon>
+      <span>Share</span>
+    </button>
+    <button mat-menu-item>
+      <span>Move</span>
+    </button>
+    <button mat-menu-item>
+      <span>Archive</span>
+    </button>
+  </mat-menu>
+      <div class="example1-container">
+        <div
+          cdkDropList
+          [cdkDropListData]="complete"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)"
+        >
+<div class="example-box" *ngFor="let item of complete" cdkDrag>
+            {{ item }}
+
+   </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+</mat-card>
+
+
+
+

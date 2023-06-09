@@ -1,0 +1,109 @@
+.container img {
+    width: 1105px;
+    height: 700px;
+    margin-left: -20px;
+}
+
+.container h2 {
+    position: absolute;
+    margin-left: 40%;
+    margin-top: -45%;
+    font-size: 55px;
+    color: white;
+    font-weight: lighter;
+}
+
+.all {
+    width: 45%;
+    margin-top: 10%;
+    margin-left: 5%;
+    height: 45vh;
+
+}
+.project{
+    width: 1000px;
+    margin-left: -3%;
+    margin-top: 65px;
+    height: 50px;
+}
+
+.card2 {
+    margin-top: -26%;
+    width: 44%;
+    margin-left: 55%;
+    height: 45vh;
+}
+.mat-h2{
+    margin-top: -55%;
+    color: white;
+    margin-left: 20%;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+
+.example-viewport {
+    height: 200px;
+    width: 200px;
+  }
+  
+  .example-item {
+    height: 50px;
+
+  }
+  .cont1:hover{
+    background-color: orange;
+    border-radius: 7px;
+  }
+  .cont2:hover{
+    background-color: red;
+    border-radius: 7px;
+
+  }
+  .cont3:hover{
+    background-color: black;
+    border-radius: 7px;
+
+  }
+  .cont4:hover{
+    background-color: orange;
+    border-radius: 7px;
+
+  }
+  .cont5:hover{
+    background-color: red;
+    border-radius: 7px;
+
+  }
+  .cont6:hover{
+    background-color:pink;
+    border-radius: 7px;
+
+  }
+  .cont7:hover{
+    background-color: purple;
+    border-radius: 7px;
+
+  }
+  .cont8:hover{
+    background-color: green;
+    border-radius: 7px;
+
+  }
+ 
+.cont :hover{
+    background-color: gray;
+        border-radius: 7px;
+}
+.starr {
+  margin-top: 14px;
+  display:flex;
+}
+
+
+.card0{
+  height: 600px;
+}
+.card.yellow {
+  background-color: yellow;
+}
