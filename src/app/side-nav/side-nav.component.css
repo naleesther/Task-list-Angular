@@ -1,6 +1,8 @@
 .example-container {
-    width: 1260px;
+    /* width: 1260px; */
     margin: 10px;
+    /* height: 600px; */
+
     
   }
   .nav{
@@ -10,7 +12,7 @@
 
   }
   .cont2{
-height:5px;
+   height:5px;
 }
   .nav img{
     width: 145px;

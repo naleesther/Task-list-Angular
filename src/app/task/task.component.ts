@@ -19,7 +19,7 @@ export class TaskComponent {
   }
 
   myControl = new FormControl('');
-  options: string[] = ['Samuel Munyagah', 'Abdul  ', 'Kelvin Maina', 'Nalenyi Esther', "Jane Ndung'u"];
+  options: string[] = ['Abdul  ', 'Kelvin Maina', 'Nalenyi Esther', "Jane Ndung'u"];
   filteredOptions!: Observable<string[]>;
 
   ngOnInit() {

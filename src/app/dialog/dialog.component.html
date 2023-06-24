@@ -73,17 +73,21 @@
     </mat-select>
   </mat-form-field>
 
+  
+
  <h4 style="margin-left: 20px;">Sub tasks</h4>
 
 <form  [formGroup]="form" (ngSubmit)="save()"class="example-form1">
   <mat-form-field class="example-full-width" style="height: 80px;width: 380px;margin-left: 20px;">
   <input matInput #message maxlength="256" formControlName="title" (change)="changes($event.target)"
   formplaceholder=" Add task and hit enter/return key" style="margin-left: 20px;" >
-  <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''" >
-    <mat-icon style="background-color: red;" >close</mat-icon>
-    </button> -->
+   <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''"> -->
+    <!-- <mat-icon style="margin-left: 320px;margin-top: -150px;">close</mat-icon> -->
+    <!-- <div><mat-icon style="font-size:25px; margin-left: 330px;margin-top: -40px;" (click)="clearForm()" >close </mat-icon></div> -->
+
+  <!-- </button> -->
      
- 
+   
     </mat-form-field>
     <div >
       <ul >
@@ -95,15 +99,20 @@
       
       </div>
   </form>
+</mat-grid-list>
+<form action="/action_page.php" style="margin-left: 70px;">
+  <label for="myfile"></label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+</form>
+
+
+
   <div class="button">
     <button mat-button color="primary">Submit</button>
   </div>
-  </mat-grid-list>
 
-    <form action="/action_page.php" style="margin-left: 70px;margin-top: -115px;">
-      <input type="file" id="myFile" name="filename">
-    </form> 
-  <h5 style="color: gray; margin-left: 60px; margin-top: -170px">
+ 
+  <h5 style="color: gray; margin-left: 60px; margin-top: -218px">
     No subtasks exist in this task
   </h5> 
   

@@ -21,11 +21,23 @@ const year = today.getFullYear();
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
-
   styleUrls: ['./dialog.component.css'],
 })
 export class DialogComponent {
-  value = 'Clear me';
+  // clear:string = '';
+    
+  value = '';
+
+ 
+
+
+  //  closeDialog() {
+  //   this.dialogRef.close();
+  // }
+
+
+ 
+
 
   notFound: any;
   list:any[]=[]
@@ -47,7 +59,7 @@ export class DialogComponent {
 
   // ============================Auto Complete=============================
   myControl = new FormControl('');
-  options: string[] = ['Samuel', 'Abdul', 'Kelvin', 'Nalenyi', 'Jane'];
+  options: string[] = ['Abdul', 'Kelvin', 'Nalenyi', 'Jane'];
   filteredOptions!: Observable<string[]>;
 
   ngOnInit() {
@@ -97,14 +109,11 @@ export class DialogComponent {
     }
     this.list.push(data)
     console.log(this.list)
-
-
+    this.form.reset();
   }
   submit(){
     console.log(this.list);
   }
   disableSelect = new FormControl(false);
-
-
 
 }

@@ -1,22 +1,29 @@
+.website{
+  /* background-color: aqua; */
+  height: 670px;
+  /* width: 1300px; */
+}
 .container img {
-    width: 1105px;
-    height: 700px;
-    margin-left: -20px;
+    width: 1280px;
+    height: 690px;
+    margin-left: -12px;
+    margin-top: -23px;
+    background-size: cover;
 }
 
-.container h2 {
+.container h2 {    
     position: absolute;
     margin-left: 40%;
-    margin-top: -45%;
+    margin-top: 95%;
     font-size: 55px;
     color: white;
     font-weight: lighter;
 }
 
 .all {
-    width: 45%;
+    width: 44%;
     margin-top: 10%;
-    margin-left: 5%;
+    margin-left: 4%;
     height: 45vh;
 
 }
@@ -28,13 +35,13 @@
 }
 
 .card2 {
-    margin-top: -26%;
+    margin-top: -25%;
     width: 44%;
-    margin-left: 55%;
+    margin-left: 52%;
     height: 45vh;
 }
 .mat-h2{
-    margin-top: -55%;
+    margin-top: -50%;
     color: white;
     margin-left: 20%;
     font-size: 30px;

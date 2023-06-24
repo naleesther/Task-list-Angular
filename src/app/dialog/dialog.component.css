@@ -1,4 +1,6 @@
-
+.dialog{
+  height: 85vh;
+}
 
 mat-grid-tile {
     background:#E6E6E6;
@@ -8,10 +10,10 @@ mat-grid-tile {
     margin-top: -50px;
   }
   .button button{
-    margin-left: 70%;
+    margin-left: 40%;
     color: white;
     background-color: blue;
-    margin-top: 30px;
+    margin-top: -12%;
     height: 6vh;
     width: 75px;
     border-radius: 6px;
@@ -66,4 +68,5 @@ mat-grid-tile {
   mat-form-field {
     margin-right: 12px;
   }
+  
   

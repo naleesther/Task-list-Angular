@@ -1,11 +1,11 @@
 
 .list{ 
-    background-color: white;
+    background-color: #ffffff;
     height: 60px;
     margin-top: 20px;
   }
   .cont{
-    background-color: white;
+    background-color: #ffffff;
     height: 150vh ;
     width: 100%;
     overflow: hidden;
