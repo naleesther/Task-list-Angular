@@ -162,12 +162,12 @@ mat-card {
 
 .search{
   margin-top: -78px;
-  margin-left: -40px;
+  margin-left: 50px;
 }
 
   mat-form-field {
-  margin-left:380px;
-  width: 180px;
+  margin-left:-10px;
+  width: 250px;
 } 
 /* lllllllllllllll */
 .example-container {

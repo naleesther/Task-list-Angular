@@ -4,10 +4,10 @@
   /* width: 1300px; */
 }
 .container img {
-    width: 1280px;
+    width: 1500px;
     height: 690px;
-    margin-left: -12px;
-    margin-top: -23px;
+    margin-left: -115px;
+    margin-top: -20px;
     background-size: cover;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .all {
-    width: 44%;
+    width: 40%;
     margin-top: 10%;
     margin-left: 4%;
     height: 45vh;
@@ -36,7 +36,7 @@
 
 .card2 {
     margin-top: -25%;
-    width: 44%;
+    width: 40%;
     margin-left: 52%;
     height: 45vh;
 }
